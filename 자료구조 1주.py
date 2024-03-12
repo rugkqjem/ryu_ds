@@ -73,3 +73,5 @@ def max(num,n):
     return num[0] if num[0]>max(num[1:],n-1) else max(num[1:],n-1)
 
 print(max(num,len(num)-1))
+
+print("hi")
