@@ -13,6 +13,13 @@ def find_max_recursive(list,n):
            return list[0]
        else: 
            return find_max_recursive(list[1:],n-1)
+       
+       #효율적 메모리 할당 / max 값 list[-1]으로 설정
+       #max_rest=find_max_recursive(list,n-1)
+       #if list[n-1]>max_rest:
+        #return list[n-1]
+       #else:
+        #return max_rest
 
 def find_max_iterative(list,n):
     max_value=list[0]
