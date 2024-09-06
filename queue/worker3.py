@@ -59,17 +59,19 @@ class Consumer:
 
 
     def run(self):
-        while True:
+        while self.__alive:  
             time.sleep(1)
-            if self.__alive:
-                for queue in queues:
-                    if not queue.isEmpty():
-                        item=queue.dequeue()
-                        print("Boarding:",item)
-                        break
-            else:
-                break
+            found_item = False
+            for queue in queues:
+                if not queue.isEmpty():
+                    item = queue.dequeue()
+                    print("Boarding:", item)
+                    found_item = True  
+                    break
+            if not found_item:
+                time.sleep(1)
         print("Consumer is dying..")
+
     def start(self):
         self.worker.start()
 

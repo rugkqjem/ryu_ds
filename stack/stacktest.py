@@ -1,4 +1,4 @@
-from liststack import ListStack
+from liststack import *
 
 def reverse(str):
     st=ListStack()
@@ -10,10 +10,10 @@ def reverse(str):
     return out
 
 def main():
-    input="Test seq 12345"
+    input="test seq 12345"
     answer=reverse(input)
-    print("Input string:",input)
-    print("Reversed string:",answer)
+    print("input str:",input)
+    print("reversed string:",answer)
 
 if __name__=="__main__":
     main()

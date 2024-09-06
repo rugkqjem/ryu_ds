@@ -89,3 +89,7 @@ class LinkedListBasic:
     def clear(self):
         self.__head.next = None
         self.__numItems = 0
+
+list=LinkedListBasic()
+list.append(30)
+list.printList()

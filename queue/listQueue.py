@@ -15,7 +15,7 @@ class ListQueue:
 			return self.__queue[0]
 
 	def isEmpty(self) -> bool:
-		return (len(self.__queue) == 0);
+		return (len(self.__queue) == 0)
  
 	def dequeueAll(self):
 		self.__queue.clear()
